@@ -48,3 +48,18 @@ let weather = {
     });
   
   weather.fetchWeather("Brussels");
+
+
+
+
+allNames = localStorage.getItem("bar");
+if (allNames) allNames = allNames.split(';;;');
+document.querySelector(".city").innerHTML = allNames
+
+
+function submit() {
+  var partnerName = document.querySelector(".bar").value;
+  allNames.push(bar);
+  localStorage.setItem("city", allNames.join(';;;'));
+  document.querySelector(".city").innerHTML = allNames;
+}
