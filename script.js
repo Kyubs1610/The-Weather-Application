@@ -20,13 +20,11 @@ let weather = {
     displayWeather: function (data) {
       
       for(i = 0; i<5; i++){
-      const  name  = document.querySelector(".bar").value
+      const  name  = document.querySelector(".bar").value;
+      
       const { description } = data.list[i].weather;
       const { temp, humidity } = data.list[i].main;
       const { speed } = data.list[i].wind;
-    
-       
-
       document.getElementById("day" + (i+1) +"City").innerText = "Weather in " + name;
       document.getElementById("img" + (i+1)).src = "http://openweathermap.org/img/wn/"+
         data.list[i].weather[0].icon
@@ -42,12 +40,19 @@ let weather = {
       }
       
     },
-
+  
     search: function () {
       this.fetchWeather(document.querySelector(".bar").value);
+      
+      const  data  = document.querySelector(".bar").value;
+      localStorage.setItem('lastWeather', JSON.stringify(data) );
+      
+
     },
-  };
   
+
+  };
+
   document.querySelector(".searchBtn").addEventListener("click", function () {
     weather.search();
   });
@@ -57,9 +62,10 @@ let weather = {
         weather.search();
       }
     });
-  
-  weather.fetchWeather("Bruxelles");
 
+    weather.fetchWeather("Brussels")
+
+ 
 
   //Getting and displaying the text for the upcoming five days of the week
 var d = new Date();
@@ -77,3 +83,7 @@ function CheckDay(day){
     for(i = 0; i<5; i++){
         document.getElementById("day" + (i+1)).innerHTML = weekday[CheckDay(i)]
     }
+
+
+
+  
