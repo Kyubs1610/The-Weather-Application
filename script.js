@@ -33,6 +33,7 @@ let weather = {
         +".png";
       document.getElementById("day" + (i+1) +"Description").innerhtml = description;
       document.getElementById("day" + (i+1) +"Temp").innerText = temp.toFixed(1) + "°C";
+      // toFixed will put only 1 number after the ,
       document.getElementById("day" + (i+1) +"Humidity").innerText = "Humidity: " + humidity + "%";
       document.getElementById("day" + (i+1) +"Wind").innerText = "Wind : " + speed + " km/h";
       document.getElementById("day" + (i+1) +"Weather").classList.remove("loading");
@@ -75,15 +76,4 @@ function CheckDay(day){
 
     for(i = 0; i<5; i++){
         document.getElementById("day" + (i+1)).innerHTML = weekday[CheckDay(i)]
-        
-        
     }
-
-
-  //   const lsTasks = localStorage.getItem('box');
-  //   generateCards(JSON.parse(lsTasks))
-
-
-  //   localStorage.setItem('box', JSON.stringify(taskList));
-	// generateCards(taskList.sort(sortFunction))
-	
