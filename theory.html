@@ -1,0 +1,37 @@
+<!-- 
+
+With a form & submit you have to "prevent" for the addEventlistener
+Event.preventDefault()
+interface tells the user agent that if the event does not get explicitly handled,
+its default action should not be taken as it normally would be.
+
+Object.fromEntries
+permet de transformer une liste de paires de clés/valeurs en un objet.
+
+
+fetch is like when you put condition
+
+fetch("adress of the server") (you need to know the address to get the info)
+.then(response => response.json())
+we will take the response from the server & transform it in Json (JavaScript Object Notation (JSON) est un format standard utilisé pour représenter des données structurées de façon semblable aux objets Javascript.)
+
+.then ((data)=> {
+    console.log(data)
+    'data' is a standard but you can call it as you wish
+})
+
+this is the template for fetch (response + data)
+
+
+fetch("api.openweathermap.org/data/2.5/forecast?lat={lat}&lon={lon}&appid={API key}")
+.then(response => response.json())
+.then ((data)=> {
+    console.log(data)
+})
+
+You can't control all you code when you work with an API because they have all their own logic so read the documentation of the API
+
+
+
+
+ -->

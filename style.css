@@ -28,7 +28,7 @@ h3{
     display:flex;
     justify-content: center;
 }
-button{
+.searchBtn{
     margin: 0.5em;
     border-radius: 50%;
     border:none;
@@ -85,4 +85,23 @@ input{
     margin: 1em;
     opacity: 0.7;
     
+  }
+
+  #myChart{
+    background: #0a0909;
+    padding: 2em;
+    color:white;
+    border-radius: 30px;
+    max-width: 420px;
+    margin: 1em;
+    opacity: 0.7;
+    
+  }
+
+  .compareBtn{
+    border-radius: 50%;
+    border:none;
+    opacity: 0.7;
+    
+
   }
