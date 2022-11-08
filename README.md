@@ -32,4 +32,7 @@ Enough is enough, you decide to build a small web application for them so that y
 - Create an account on [OpenWeather](https://home.openweathermap.org/), and generate a key
 - Get the weather data using the native JS [`fetch()`](https://devdocs.io/dom/fetch_api/using_fetch) method.
 
-![](./american-storm.gif)
+If you want to reuse this code besure to create an API KEY and change it inside the script.js
+
+
+
