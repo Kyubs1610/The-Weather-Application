@@ -23,7 +23,6 @@ Enough is enough, you decide to build a small web application for them so that y
 #### 🌼 Nice to haves (in no specific order)
 
 - Remember the user choice on subsequent visits
-- Allow the user to compare the weather in two cities
 - Use the API of https://unsplash.com/ to show a photo of the city they entered in the form.
 - Display a line graph of temperature over time using a library such as [Chart.js](https://www.chartjs.org)
 
@@ -35,4 +34,4 @@ Enough is enough, you decide to build a small web application for them so that y
 If you want to reuse this code be sure to create an API KEY and change it inside the script.js
 
 
-
+![Screenshot](view.png)
