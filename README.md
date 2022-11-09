@@ -34,4 +34,4 @@ Enough is enough, you decide to build a small web application for them so that y
 If you want to reuse this code be sure to create an API KEY and change it inside the script.js
 
 
-![Screenshot](View.png)
+![Screenshot](View.PNG)
