@@ -1,5 +1,5 @@
 let weather = {
-    apiKey: "Put your API key here",
+    apiKey: "3d79f7133d6e9f01769c48deb4697f04",
     fetchWeather: function (city) {
       fetch(
         "https://api.openweathermap.org/data/2.5/forecast?q=" +
@@ -58,7 +58,7 @@ const config = {
    data: {
        labels: ["1", "2", "3", "4", "5"], 
        datasets: [{
-           label: '°C',
+           label: 'Temperature',
            data: xyValues, 
            backgroundColor: [
                'rgba(255, 99, 132, 0.2)',
@@ -85,15 +85,9 @@ const config = {
                beginAtZero: true
            }
        }
-           
-       
    }
   
-   
-  
  };
-
-
  if (Chart.getChart("myChart")){
   Chart.getChart("myChart").destroy();
 }
@@ -127,7 +121,7 @@ myChart=new Chart(ctx,config)
       const name2 = localStorage.getItem('lastChoice');
       document.querySelector(".bar").value = name2;
       
-  })
+   })
   const name2 = localStorage.getItem('lastChoice'); 
  
   weather.fetchWeather(name2)
