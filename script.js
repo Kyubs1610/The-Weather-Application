@@ -1,5 +1,5 @@
 let weather = {
-    apiKey: "Put your API KEY",
+    apiKey: "Put your API key here",
     fetchWeather: function (city) {
       fetch(
         "https://api.openweathermap.org/data/2.5/forecast?q=" +
@@ -15,8 +15,8 @@ let weather = {
           return response.json();
         })
         .then((data) => this.displayWeather(data));
-
     },
+
     displayWeather: function (data) {
       
       for(i = 0; i<5; i++){
@@ -36,8 +36,10 @@ let weather = {
       document.getElementById("day" + (i+1) +"Weather").classList.remove("loading");
       document.body.style.backgroundImage =
         "url('https://source.unsplash.com/1600x900/?" + name + "')";
+        const remember = localStorage.setItem("lastChoice", name)
+        
       }
-
+    //  fetchWeather(localStorage.getItem("lastChoice"))
       //Chart
 let myChart = null
 
@@ -91,6 +93,7 @@ const config = {
   
  };
 
+
  if (Chart.getChart("myChart")){
   Chart.getChart("myChart").destroy();
 }
@@ -101,10 +104,7 @@ myChart=new Chart(ctx,config)
       search: function () {
       this.fetchWeather(document.querySelector(".bar").value);
       
-      const  data  = document.querySelector(".bar").value;
-      JSON.parse(localStorage.setItem("lastWeather",(data)));
-
-    },
+      },
   
   };
 
@@ -124,11 +124,11 @@ myChart=new Chart(ctx,config)
 // getting the last city knowed from the Local storage    
 
     window.addEventListener('load', () => {
-      const name2 = localStorage.getItem('lastWeather');
+      const name2 = localStorage.getItem('lastChoice');
       document.querySelector(".bar").value = name2;
       
   })
-  const name2 = localStorage.getItem('lastWeather'); 
+  const name2 = localStorage.getItem('lastChoice'); 
  
   weather.fetchWeather(name2)
  
@@ -152,6 +152,6 @@ function CheckDay(day){
           
     }
 
-
+    
 
   
